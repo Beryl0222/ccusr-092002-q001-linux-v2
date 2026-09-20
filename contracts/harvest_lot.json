@@ -1,0 +1,16 @@
+{
+  "service": "flower-cold-chain",
+  "source_context": "http://ent.people.com.cn/n1/2026/0916/c1012-40799502.html",
+  "sample": {
+    "lot_id": "YX-20260914-ROSE-01",
+    "cultivar": "红色切花月季",
+    "harvested_at": "2026-09-14T05:40:00+08:00",
+    "stems": 2400,
+    "events": [
+      {
+        "kind": "precooled",
+        "temperature_c": 3.8
+      }
+    ]
+  }
+}
