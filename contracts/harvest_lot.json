@@ -12,5 +12,76 @@
         "temperature_c": 3.8
       }
     ]
+  },
+  "measurement_governance_sample": {
+    "lot": {
+      "lot_id": "YX-20260914-ROSE-01",
+      "route_id": "KUN-BANG-R2",
+      "packaging": "泡沫箱+蓄冷剂",
+      "season": "autumn"
+    },
+    "segments": [
+      {
+        "segment_id": "SEG-SAMPLE-01",
+        "carrier_id": "CARRIER-YX-01",
+        "name": "昆明至呈贡冷库干线段",
+        "start_at": "2026-09-14T06:00:00+08:00",
+        "end_at": "2026-09-14T12:00:00+08:00",
+        "limit_min_c": 2.0,
+        "limit_max_c": 8.0,
+        "nominal_interval_s": 300
+      }
+    ],
+    "instrument": {
+      "instrument_id": "INS-SAMPLE-01",
+      "model": "Testo-示例型号",
+      "kind": "data_logger",
+      "installation": {
+        "position": "货箱中部第三层",
+        "start_at": "2026-09-14T06:00:00+08:00",
+        "end_at": "2026-09-14T12:00:00+08:00"
+      }
+    },
+    "calibration_cert": {
+      "lab": "云南热作所校准实验室（示例）",
+      "valid_from": "2026-03-01T00:00:00+08:00",
+      "valid_until": "2027-03-01T00:00:00+08:00",
+      "max_abs_error_c": 0.3
+    },
+    "clock_drift_check": {
+      "checked_at": "2026-09-14T05:30:00+08:00",
+      "device_clock_at": "2026-09-14T05:30:12+08:00",
+      "ppm": 8.5
+    },
+    "correction_curve": {
+      "version": 1,
+      "kind": "piecewise_linear",
+      "params": {
+        "points": [[0.0, 0.1], [5.0, 0.0], [10.0, -0.2]],
+        "uncertainty_c": 0.15
+      },
+      "published_by": "LAB-YN-01"
+    },
+    "reading": {
+      "device_time": "2026-09-14T08:15:00+08:00",
+      "received_at": "2026-09-14T18:02:41+08:00",
+      "raw_c": 6.7,
+      "backfill": false,
+      "note": "补传数据 device_time 与 received_at 分别保存，互不覆盖"
+    },
+    "verdicts": ["compliant", "exceeded", "inconclusive"],
+    "inconclusive_when_any_of": [
+      "calibration_expired",
+      "clock_unverified",
+      "sampling_gap 导致有效覆盖率低于 0.95",
+      "probe_divergence 多探头偏差超出阈值且扩展不确定区间互不重叠",
+      "限值边际：扩展不确定区间跨越限值"
+    ],
+    "roles": {
+      "admin": "行业协会：登记与签署，全量可见",
+      "lab": "实验人员：证书 / 时钟核查 / 版本化修正曲线",
+      "carrier": "承运商：仅自有设备与本区段",
+      "claims": "理赔：仅脱敏证据包"
+    }
   }
 }
