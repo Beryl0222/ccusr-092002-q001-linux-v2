@@ -6,6 +6,24 @@
     "cultivar": "红色切花月季",
     "harvested_at": "2026-09-14T05:40:00+08:00",
     "stems": 2400,
+    "route_id": "KMG-BAV-D1",
+    "packaging": "保湿棉+打孔膜",
+    "temp_min_c": 2.0,
+    "temp_max_c": 6.0,
+    "segments": [
+      {
+        "segment_id": "SEG-FIELD-PRECOOL",
+        "carrier_id": "coop-yuxi-01",
+        "started_at": "2026-09-14T06:00:00+08:00",
+        "stopped_at": "2026-09-14T09:00:00+08:00"
+      },
+      {
+        "segment_id": "SEG-TRUNK-KMG",
+        "carrier_id": "carrier-luyun-88",
+        "started_at": "2026-09-14T09:30:00+08:00",
+        "stopped_at": "2026-09-14T18:00:00+08:00"
+      }
+    ],
     "events": [
       {
         "kind": "precooled",
